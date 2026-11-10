@@ -1,0 +1,17 @@
+# Thème clair et sombre : Streamlit suit le réglage du système,
+# et l'utilisateur peut basculer via le menu ⋮ > Settings.
+[theme]
+baseRadius = "lg"
+font = "sans-serif"
+
+[theme.light]
+primaryColor = "#0A7AFF"
+backgroundColor = "#F4F6FB"
+secondaryBackgroundColor = "#EEF1F7"
+textColor = "#1D1D1F"
+
+[theme.dark]
+primaryColor = "#0A84FF"
+backgroundColor = "#0B0D12"
+secondaryBackgroundColor = "#1A1D24"
+textColor = "#F5F5F7"

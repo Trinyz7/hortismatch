@@ -1,0 +1,195 @@
+[
+  {
+    "id": "m01",
+    "titre": "Business Analyst Olympic",
+    "client": "Banque privée genevoise (fictif)",
+    "site": "Genève",
+    "debut_dans_jours": 15,
+    "seniorite_min": 5,
+    "description": "Dans le cadre de l'évolution de son core banking Olympic, une banque privée recherche un business analyst pour recueillir les besoins des métiers, rédiger les spécifications fonctionnelles et piloter la recette. Environnement agile.",
+    "obligatoires": [
+      "Business Analysis",
+      "Olympic Banking System",
+      "Banque privée"
+    ],
+    "souhaitees": [
+      "Tests / Recette",
+      "SQL",
+      "Agile / Scrum",
+      "Conformité / LBA"
+    ],
+    "langues": [
+      "Français",
+      "Anglais"
+    ],
+    "retenu": "c01"
+  },
+  {
+    "id": "m02",
+    "titre": "Data Analyst Power BI – Finance",
+    "client": "Organisation internationale à Genève (fictif)",
+    "site": "Genève",
+    "debut_dans_jours": 10,
+    "seniorite_min": 3,
+    "description": "Accompagner le contrôle de gestion dans la définition des indicateurs et la création de tableaux de bord Power BI. Requêtes SQL sur l'entrepôt de données, fiabilisation des KPI.",
+    "obligatoires": [
+      "Power BI",
+      "SQL",
+      "Finance / Contrôle de gestion"
+    ],
+    "souhaitees": [
+      "Data Warehouse",
+      "Excel avancé",
+      "Python"
+    ],
+    "langues": [
+      "Français",
+      "Anglais"
+    ],
+    "retenu": "c03"
+  },
+  {
+    "id": "m03",
+    "titre": "Data Engineer – Plateforme de données",
+    "client": "Banque privée (fictif)",
+    "site": "Genève",
+    "debut_dans_jours": 30,
+    "seniorite_min": 4,
+    "description": "Construire des pipelines d'ingestion et de transformation vers un data lake, industrialiser les traitements avec Docker et une chaîne CI/CD, alimenter le reporting réglementaire.",
+    "obligatoires": [
+      "Python",
+      "ETL",
+      "Data Lake",
+      "Docker"
+    ],
+    "souhaitees": [
+      "Spark",
+      "Airflow",
+      "Azure",
+      "CI/CD",
+      "Banque"
+    ],
+    "langues": [
+      "Français",
+      "Anglais"
+    ],
+    "retenu": "c04"
+  },
+  {
+    "id": "m04",
+    "titre": "Développeur React – Studio",
+    "client": "Groupe de médias (fictif)",
+    "site": "Genève",
+    "debut_dans_jours": 7,
+    "seniorite_min": 3,
+    "description": "Développer une application web à partir de maquettes UX / UI, en lien avec les designers du studio. Front React, API REST, intégration continue.",
+    "obligatoires": [
+      "React",
+      "JavaScript",
+      "UX/UI"
+    ],
+    "souhaitees": [
+      "Node.js",
+      "CI/CD",
+      "Médias"
+    ],
+    "langues": [
+      "Français"
+    ],
+    "retenu": "c05"
+  },
+  {
+    "id": "m05",
+    "titre": "Assistant IA documentaire (RAG)",
+    "client": "Projet interne Hortis (fictif)",
+    "site": "Paris",
+    "debut_dans_jours": 0,
+    "seniorite_min": 1,
+    "description": "Prototyper un assistant d'IA générative qui répond aux questions à partir des documents de projets, avec recherche sémantique et API. Déploiement conteneurisé.",
+    "obligatoires": [
+      "Python",
+      "NLP",
+      "IA générative"
+    ],
+    "souhaitees": [
+      "Docker",
+      "API REST",
+      "PostgreSQL",
+      "Machine Learning"
+    ],
+    "langues": [
+      "Français"
+    ],
+    "retenu": "c07"
+  },
+  {
+    "id": "m06",
+    "titre": "Chef de projet migration core banking",
+    "client": "Banque cantonale (fictif)",
+    "site": "Lausanne",
+    "debut_dans_jours": 60,
+    "seniorite_min": 8,
+    "description": "Piloter la migration vers un nouveau core banking : planning, budget, coordination des équipes métier et IT, conduite du changement.",
+    "obligatoires": [
+      "Gestion de projet",
+      "Banque"
+    ],
+    "souhaitees": [
+      "Avaloq",
+      "Agile / Scrum",
+      "Secteur public"
+    ],
+    "langues": [
+      "Français",
+      "Allemand"
+    ],
+    "retenu": "c02"
+  },
+  {
+    "id": "m07",
+    "titre": "Business Analyst T24 – démarrage immédiat",
+    "client": "Banque privée (fictif)",
+    "site": "Genève",
+    "debut_dans_jours": 0,
+    "seniorite_min": 2,
+    "description": "Banque privée genevoise : business analyst pour recueillir les besoins des métiers, rédiger les spécifications fonctionnelles et piloter la recette du core banking Temenos T24. Démarrage immédiat.",
+    "obligatoires": [
+      "Business Analysis",
+      "Temenos T24",
+      "Banque privée"
+    ],
+    "souhaitees": [
+      "Tests / Recette",
+      "Agile / Scrum"
+    ],
+    "langues": [
+      "Français",
+      "Anglais"
+    ],
+    "retenu": "c09"
+  },
+  {
+    "id": "m08",
+    "titre": "Senior Data Engineer – Streaming",
+    "client": "International trading firm (fictitious)",
+    "site": "Genève",
+    "debut_dans_jours": 30,
+    "seniorite_min": 5,
+    "description": "We are looking for a senior data engineer to build real-time streaming pipelines with Kafka and Spark, deploy them with Docker and Kubernetes and maintain the lakehouse. English-speaking team.",
+    "obligatoires": [
+      "Kafka",
+      "Spark",
+      "Python",
+      "Docker"
+    ],
+    "souhaitees": [
+      "Kubernetes",
+      "Data Lake",
+      "Airflow"
+    ],
+    "langues": [
+      "Anglais"
+    ],
+    "retenu": "c04"
+  }
+]

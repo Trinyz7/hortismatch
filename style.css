@@ -1,0 +1,344 @@
+/* HortisMatch - thème « verre dépoli » inspiré d'Apple, clair et sombre.
+   Streamlit pose color-scheme: light|dark sur l'application ; light-dark()
+   choisit donc automatiquement la bonne valeur selon le thème actif. */
+
+@property --hm-n {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0;
+}
+
+:root {
+  --glass-bg: light-dark(rgba(255, 255, 255, 0.42), rgba(36, 39, 48, 0.42));
+  --glass-bg-strong: light-dark(rgba(255, 255, 255, 0.62), rgba(44, 47, 58, 0.55));
+  --glass-border: light-dark(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.10));
+  --glass-highlight: light-dark(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.08));
+  --glass-shadow:
+    0 10px 40px light-dark(rgba(31, 45, 80, 0.10), rgba(0, 0, 0, 0.45)),
+    0 1px 2px light-dark(rgba(31, 45, 80, 0.05), rgba(0, 0, 0, 0.3)),
+    inset 0 1px 0 var(--glass-highlight);
+  --glass-shadow-hover:
+    0 18px 50px light-dark(rgba(31, 45, 80, 0.16), rgba(0, 0, 0, 0.55)),
+    0 1px 2px light-dark(rgba(31, 45, 80, 0.06), rgba(0, 0, 0, 0.3)),
+    inset 0 1px 0 var(--glass-highlight);
+  --glass-blur: saturate(190%) blur(28px);
+  --hairline: light-dark(rgba(29, 29, 31, 0.08), rgba(255, 255, 255, 0.08));
+  --track: light-dark(rgba(29, 29, 31, 0.07), rgba(255, 255, 255, 0.09));
+  --muted: light-dark(rgba(29, 29, 31, 0.56), rgba(245, 245, 247, 0.56));
+  --accent: light-dark(#0A7AFF, #0A84FF);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+html, body, [class*="css"] {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI Variable",
+    "Segoe UI", Inter, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ------------------------------------------------------------ Fond */
+[data-testid="stApp"] {
+  background:
+    radial-gradient(900px 650px at 6% -5%, light-dark(rgba(10, 122, 255, 0.26), rgba(10, 132, 255, 0.30)), transparent 62%),
+    radial-gradient(800px 650px at 100% 10%, light-dark(rgba(175, 82, 222, 0.20), rgba(191, 90, 242, 0.26)), transparent 62%),
+    radial-gradient(900px 700px at 55% 105%, light-dark(rgba(52, 199, 89, 0.16), rgba(48, 209, 88, 0.16)), transparent 62%),
+    radial-gradient(600px 500px at 30% 55%, light-dark(rgba(255, 159, 10, 0.10), rgba(255, 159, 10, 0.08)), transparent 60%),
+    light-dark(linear-gradient(180deg, #F7F8FC 0%, #ECEFF6 100%), linear-gradient(180deg, #0B0D12 0%, #07080B 100%));
+  background-attachment: fixed;
+}
+[data-testid="stHeader"] {
+  background: light-dark(rgba(247, 248, 252, 0.5), rgba(11, 13, 18, 0.5));
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--hairline);
+}
+
+/* ------------------------------------------------------------ Barre latérale */
+[data-testid="stSidebar"] {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-right: 1px solid var(--glass-border);
+  box-shadow: inset -1px 0 0 var(--glass-highlight);
+}
+
+/* ------------------------------------------------------------ Titres */
+h1 { font-weight: 700; letter-spacing: -0.03em; }
+h2, h3 { font-weight: 600; letter-spacing: -0.015em; }
+
+/* ------------------------------------------------------------ Cartes en verre */
+[class*="st-key-card_"],
+[data-testid="stExpander"] details,
+[data-testid="stFileUploaderDropzone"] {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 22px !important;
+  box-shadow: var(--glass-shadow);
+}
+[class*="st-key-card_"] {
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  animation: hm-rise 0.6s var(--ease) both;
+}
+[class*="st-key-card_2"] { animation-delay: 0.06s; }
+[class*="st-key-card_3"] { animation-delay: 0.12s; }
+[class*="st-key-card_4"] { animation-delay: 0.18s; }
+[class*="st-key-card_5"] { animation-delay: 0.24s; }
+[class*="st-key-card_"]:hover {
+  transform: translateY(-3px) scale(1.003);
+  box-shadow: var(--glass-shadow-hover);
+}
+[data-testid="stExpander"] details {
+  background: var(--glass-bg-strong);
+  border-radius: 16px !important;
+  box-shadow: inset 0 1px 0 var(--glass-highlight);
+}
+[data-testid="stExpander"] summary:hover { color: var(--accent); }
+
+/* ------------------------------------------------------------ Onglets (segmented control) */
+[data-testid="stTabs"] [role="tablist"] {
+  gap: 4px;
+  padding: 4px;
+  width: fit-content;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  box-shadow: var(--glass-shadow);
+}
+[data-testid="stTabs"] [role="tab"] {
+  padding: 7px 18px;
+  border-radius: 999px;
+  height: auto;
+  transition: background 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+[data-testid="stTabs"] [role="tab"][aria-selected="true"] {
+  background: light-dark(#FFFFFF, rgba(255, 255, 255, 0.14));
+  box-shadow: 0 2px 10px light-dark(rgba(31, 45, 80, 0.12), rgba(0, 0, 0, 0.4));
+}
+[data-testid="stTabs"] [data-baseweb="tab-highlight"],
+[data-testid="stTabs"] [data-baseweb="tab-border"] { display: none; }
+
+/* ------------------------------------------------------------ Champs */
+[data-baseweb="select"] > div,
+[data-baseweb="input"],
+[data-baseweb="textarea"] {
+  background: var(--glass-bg-strong) !important;
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--hairline) !important;
+  border-radius: 12px !important;
+}
+[data-baseweb="popover"] ul,
+[data-baseweb="popover"] [role="listbox"] {
+  background: light-dark(rgba(255, 255, 255, 0.78), rgba(36, 39, 48, 0.78)) !important;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 14px;
+}
+
+/* ------------------------------------------------------------ Tableaux et graphiques */
+[data-testid="stDataFrame"],
+[data-testid="stVegaLiteChart"],
+[data-testid="stArrowVegaLiteChart"] {
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: var(--glass-shadow);
+}
+
+/* ------------------------------------------------------------ Boutons */
+.stButton > button {
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  font-weight: 500;
+  transition: transform 0.2s var(--ease);
+}
+.stButton > button:hover { border-color: var(--accent); color: var(--accent); }
+.stButton > button:active { transform: scale(0.97); }
+
+/* ------------------------------------------------------------ Bandeaux */
+[data-testid="stAlert"] > div {
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+/* ============================================================ Dashboard animé */
+
+/* Chiffre qui compte de 0 jusqu'à --to. */
+.hm-count {
+  --hm-n: var(--to);
+  counter-reset: hm var(--hm-n);
+  animation: hm-count 1.4s var(--ease) both;
+  animation-delay: var(--d, 0s);
+  font-variant-numeric: tabular-nums;
+}
+.hm-count::after { content: counter(hm); }
+
+/* Barre qui se remplit jusqu'à --w. */
+.hm-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--track);
+  overflow: hidden;
+}
+.hm-fill {
+  height: 100%;
+  width: var(--w);
+  border-radius: inherit;
+  background: var(--g, linear-gradient(90deg, #5AC8FA, #0A7AFF));
+  box-shadow: 0 0 12px color-mix(in srgb, var(--c, #0A7AFF) 45%, transparent);
+  animation: hm-grow 1.3s var(--ease) both;
+  animation-delay: var(--d, 0s);
+}
+
+/* Tuiles KPI. */
+.hm-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin: 4px 0 18px;
+}
+.hm-kpi {
+  position: relative;
+  overflow: hidden;
+  padding: 16px 18px 18px;
+  border-radius: 22px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  animation: hm-rise 0.6s var(--ease) both;
+  animation-delay: var(--d, 0s);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.hm-kpi:hover { transform: translateY(-3px); box-shadow: var(--glass-shadow-hover); }
+/* Halo coloré dans le coin, comme les widgets iOS. */
+.hm-kpi::before {
+  content: "";
+  position: absolute;
+  inset: -40% -30% auto auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--c) 35%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.hm-kpi-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+.hm-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 0 8px var(--c);
+}
+.hm-kpi-value {
+  margin: 6px 0 12px;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.hm-unit { font-size: 0.95rem; font-weight: 600; color: var(--muted); margin-left: 3px; }
+.hm-kpi-foot { margin-top: 8px; font-size: 0.75rem; color: var(--muted); }
+
+/* Score d'une fiche consultant. */
+.hm-score { text-align: right; }
+.hm-score-label { font-size: 0.78rem; font-weight: 600; color: var(--muted); }
+.hm-score-value {
+  font-size: clamp(1.7rem, 2.4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 2px 0 10px;
+}
+
+/* Détail du score : une ligne par critère. */
+.hm-rows { display: flex; flex-direction: column; gap: 14px; padding: 4px 2px 6px; }
+.hm-row { animation: hm-rise 0.5s var(--ease) both; animation-delay: var(--d, 0s); }
+.hm-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+}
+.hm-row-name { font-weight: 600; }
+.hm-row-meta { color: var(--muted); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+.hm-row-meta b { color: var(--c); font-weight: 700; font-size: 0.9rem; }
+
+@keyframes hm-count { from { --hm-n: 0; } }
+@keyframes hm-grow { from { width: 0; } }
+@keyframes hm-rise {
+  from { opacity: 0; transform: translateY(10px) scale(0.985); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ============================================================ Compétences d'une fiche */
+.hm-tags { display: flex; flex-direction: column; gap: 10px; margin: 6px 0 14px; }
+.hm-tagrow { display: flex; align-items: flex-start; gap: 14px; }
+.hm-tagkey {
+  flex: 0 0 92px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding-top: 4px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+/* Icônes au trait (style SF Symbols) dessinées par masque, teintées par --c. */
+.hm-ico {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--c) 16%, transparent);
+}
+.hm-ico::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: var(--c);
+  -webkit-mask: var(--ico) center / contain no-repeat;
+  mask: var(--ico) center / contain no-repeat;
+}
+.hm-check { --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.2 4.2L19 7'/%3E%3C/svg%3E"); }
+.hm-alert { --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 7v6'/%3E%3Cpath d='M12 17v.01'/%3E%3C/svg%3E"); }
+.hm-plus { --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v14'/%3E%3Cpath d='M5 12h14'/%3E%3C/svg%3E"); }
+.hm-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.hm-chip {
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--hairline);
+}
+/* Les compétences manquantes ressortent, sans crier. */
+.hm-alert .hm-chip {
+  border-style: dashed;
+  border-color: color-mix(in srgb, var(--c) 55%, transparent);
+  background: color-mix(in srgb, var(--c) 8%, transparent);
+}

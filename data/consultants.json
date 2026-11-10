@@ -1,0 +1,57 @@
+[
+  {
+    "id": "c01", "nom": "Camille Rochat", "titre": "Business Analyst senior", "site": "Genève",
+    "annees_experience": 8, "disponible_dans_jours": 10,
+    "cv": "Business Analyst avec 8 ans d'expérience en banque privée à Genève. Recueil des besoins, rédaction de spécifications fonctionnelles et pilotage de la recette sur Olympic Banking System. Projets de migration et de conformité LBA / KYC. Méthodes agile et Scrum. Bonne maîtrise de SQL pour l'analyse de données. Français natif, anglais courant."
+  },
+  {
+    "id": "c02", "nom": "Lucas Meylan", "titre": "Chef de projet SI", "site": "Lausanne",
+    "annees_experience": 12, "disponible_dans_jours": 45,
+    "cv": "Chef de projet avec 12 ans d'expérience dans la gestion de projet SI pour la banque et le secteur public. Pilotage budget et planning, PMO, conduite du changement. Mise en place d'Avaloq dans une banque cantonale. Agile / Scrum, product owner. Français, anglais, allemand."
+  },
+  {
+    "id": "c03", "nom": "Inès Haddad", "titre": "Data Analyst BI", "site": "Genève",
+    "annees_experience": 4, "disponible_dans_jours": 0,
+    "cv": "Data Analyst avec 4 ans d'expérience. Conception de tableaux de bord Power BI (DAX, Power Query) pour le contrôle de gestion et le reporting financier. Requêtes SQL sur data warehouse Oracle, modélisation en étoile. Excel avancé et VBA. Analyse exploratoire avec Python et Pandas. Français et anglais."
+  },
+  {
+    "id": "c04", "nom": "Thomas Berger", "titre": "Data Engineer", "site": "Genève",
+    "annees_experience": 6, "disponible_dans_jours": 20,
+    "cv": "Data Engineer avec 6 ans d'expérience. Développement de pipelines ETL en Python et Spark (Databricks), orchestration Airflow, streaming Kafka. Data lake sur Azure, entrepôt de données PostgreSQL. Docker, Kubernetes, CI/CD GitLab CI. Expérience dans une banque privée sur le reporting réglementaire FINMA. Anglais courant, français."
+  },
+  {
+    "id": "c05", "nom": "Sofia Marques", "titre": "Développeuse front-end", "site": "Genève",
+    "annees_experience": 5, "disponible_dans_jours": 5,
+    "cv": "Développeuse front-end avec 5 ans d'expérience au sein d'un studio digital. React, TypeScript, Vue.js, Node.js. Intégration de maquettes UX / UI réalisées sous Figma, accessibilité. Applications web pour les médias et une banque en ligne. Tests, Git et CI/CD. Français, anglais, portugais."
+  },
+  {
+    "id": "c06", "nom": "Julien Favre", "titre": "Développeur mobile", "site": "Lausanne",
+    "annees_experience": 7, "disponible_dans_jours": 30,
+    "cv": "Développeur mobile avec 7 ans d'expérience : applications iOS en Swift et Android en Kotlin. API REST, intégration continue avec GitHub Actions. Applications grand public pour les médias et l'horlogerie. Français, anglais."
+  },
+  {
+    "id": "c07", "nom": "Nadia Benali", "titre": "Data Scientist", "site": "Paris",
+    "annees_experience": 3, "disponible_dans_jours": 15,
+    "cv": "Data Scientist avec 3 ans d'expérience. Machine learning (scikit-learn), deep learning (PyTorch), NLP et IA générative : chatbot RAG sur une base documentaire. Python, Pandas, SQL, statistiques. Mise en production avec Docker et FastAPI. Français, anglais."
+  },
+  {
+    "id": "c08", "nom": "Marc Dubois", "titre": "Analyste métier finance", "site": "Genève",
+    "annees_experience": 10, "disponible_dans_jours": 60,
+    "cv": "Analyste métier avec 10 ans d'expérience en finance et contrôle de gestion. Business analysis, recueil des besoins, reporting financier, paramétrage SAP FI. Excel avancé, Power BI de base. Gestion de projet de déploiement. Français, anglais."
+  },
+  {
+    "id": "c09", "nom": "Elena Rossi", "titre": "Business Analyst / PO", "site": "Genève",
+    "annees_experience": 3, "disponible_dans_jours": 0,
+    "cv": "Business Analyst et product owner avec 3 ans d'expérience dans une banque privée. Rédaction des user stories, recette et tests fonctionnels, agile Scrum. Connaissance de Temenos T24. SQL de base, Excel. Français, anglais, italien."
+  },
+  {
+    "id": "c10", "nom": "Kevin Morel", "titre": "Ingénieur DevOps", "site": "Lausanne",
+    "annees_experience": 6, "disponible_dans_jours": 0,
+    "cv": "Ingénieur DevOps avec 6 ans d'expérience. Docker, Kubernetes, CI/CD Jenkins et GitHub Actions, infrastructure AWS et Azure, Linux. Scripts Python. Supervision et sécurité des déploiements dans le secteur public. Français, anglais."
+  },
+  {
+    "id": "c12", "nom": "Claire Vuilleumier", "titre": "Consultante conformité et données", "site": "Genève",
+    "annees_experience": 9, "disponible_dans_jours": 25,
+    "cv": "Consultante avec 9 ans d'expérience en conformité bancaire et protection des données : nLPD, RGPD, LBA, KYC. Business analysis sur les outils de conformité d'une banque privée, gouvernance des données, qualité des données avec SQL. Gestion de projet. Français, anglais, allemand."
+  }
+]

@@ -1,0 +1,11 @@
+﻿# Base locale : contient les CV importés (données personnelles)
+data/*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Configuration locale de Claude
+.claude/
